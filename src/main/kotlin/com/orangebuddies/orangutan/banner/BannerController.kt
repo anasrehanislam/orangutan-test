@@ -18,6 +18,7 @@ class BannerController(
     @GetMapping("/banners")
 
     // http://localhost:5000/api/banners?culture=en-GB&channel=web&type=SkyScraperWrapper&page=1&limit=2
+    //Header: X-API-KEY=partner1
     suspend fun getBanners(
             @RequestHeader("X-API-KEY") partnerKey: String,
             @RequestParam("culture") culture: String,
