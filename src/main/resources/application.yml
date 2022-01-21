@@ -1,0 +1,30 @@
+#debug: false
+spring:
+  application:
+    name: orangutan
+  main:
+    banner-mode: "off"
+  r2dbc:
+#    url: r2dbc:mysql:mysql:aurora://squirrel.cluster-cbpqabs7vran.eu-west-1.rds.amazonaws.com:3306/squirrel?tlsVersion=TLSv1.2
+    url: r2dbc:mysql://172.19.0.1:3306/admin_orangutan?tlsVersion=TLSv1.2
+    username: root
+    password: root
+#    url: r2dbc:mysql://orangutan.c7srcmualxez.eu-west-1.rds.amazonaws.com:3306/admin_orangutan?tlsVersion=TLSv1.2
+#    username: admin
+#    password: orangutan123
+
+orangutan:
+  partners:
+    partner1:
+      apikey: SBS_KEY
+      refKey: SBS__refKEY
+    partner2:
+      apikey: PARTNER2_KEY
+      refKey: PARTNER2_refKEY
+
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          r2dbc: DEBUG
