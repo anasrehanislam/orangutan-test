@@ -31,10 +31,5 @@ class BannerController(
         val banners = service.getBanners(culture, channel, size, limit, page)
         return banners
     }
-    @GetMapping("/test")
-   suspend fun testFun(): BannerResponse {
-     val banners= service.finBannerByClient()
-        return banners
-    }
 
 }
